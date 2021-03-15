@@ -8,6 +8,19 @@
 
 4. Go to the console > Operator hub > Storage > Choose the non-GA version to install OCS
 
+Or add the function below to your shell's config file and run `ocs-unreleased`:
+```bash
+ocs-unreleased() {
+  cd console
+  wget https://raw.githubusercontent.com/afreen23/dev-setup/main/install-ocs.sh
+  chmod +x install-ocs.sh
+  ./install-ocs.sh
+  rm install-ocs.sh
+  cd - >> /dev/null
+}
+
+```
+
 ## Installing m4.2xlarge cluster for OCS
 
 1. Install the `openhisft-installer`
